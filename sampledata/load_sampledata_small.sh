@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo "Uploading sampledata to $1"
+echo "Uploading sampledata to $1 from $DIR"
 
 # Employees 
 echo "\nDeleting old humanresources index"
