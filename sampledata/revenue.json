@@ -1,0 +1,48 @@
+{"index":{"_id":"1","_index":"finance","_type":"revenue"}}
+{"date": "2015-01-01", "revenue":141000, "customers":100}
+{"index":{"_id":"2","_index":"finance","_type":"revenue"}}
+{"date": "2015-02-01", "revenue":93000, "customers":54}
+{"index":{"_id":"3","_index":"finance","_type":"revenue"}}
+{"date": "2015-03-01", "revenue":92000, "customers":130}
+{"index":{"_id":"4","_index":"finance","_type":"revenue"}}
+{"date": "2015-04-01", "revenue":135000, "customers":120}
+{"index":{"_id":"5","_index":"finance","_type":"revenue"}}
+{"date": "2015-05-01", "revenue":76000, "customers":111}
+{"index":{"_id":"6","_index":"finance","_type":"revenue"}}
+{"date": "2015-06-01", "revenue":62000, "customers":87}
+{"index":{"_id":"7","_index":"finance","_type":"revenue"}}
+{"date": "2015-07-01", "revenue":175000, "customers":201}
+{"index":{"_id":"8","_index":"finance","_type":"revenue"}}
+{"date": "2015-08-01", "revenue":123000, "customers":182}
+{"index":{"_id":"9","_index":"finance","_type":"revenue"}}
+{"date": "2015-09-01", "revenue":174000, "customers":100}
+{"index":{"_id":"10","_index":"finance","_type":"revenue"}}
+{"date": "2015-10-01", "revenue":67000, "customers":234}
+{"index":{"_id":"11","_index":"finance","_type":"revenue"}}
+{"date": "2015-11-01", "revenue":123000, "customers":134}
+{"index":{"_id":"12","_index":"finance","_type":"revenue"}}
+{"date": "2015-12-01", "revenue":201000, "customers":34}
+{"index":{"_id":"13","_index":"finance","_type":"revenue"}}
+{"date": "2016-01-01", "revenue":128000, "customers":123}
+{"index":{"_id":"14","_index":"finance","_type":"revenue"}}
+{"date": "2016-02-01", "revenue":142000, "customers":64}
+{"index":{"_id":"15","_index":"finance","_type":"revenue"}}
+{"date": "2016-03-01", "revenue":98000, "customers":211}
+{"index":{"_id":"16","_index":"finance","_type":"revenue"}}
+{"date": "2016-04-01", "revenue":165000, "customers":193}
+{"index":{"_id":"17","_index":"finance","_type":"revenue"}}
+{"date": "2016-05-01", "revenue":119000, "customers":172}
+{"index":{"_id":"18","_index":"finance","_type":"revenue"}}
+{"date": "2016-06-01", "revenue":64000, "customers":162}
+{"index":{"_id":"19","_index":"finance","_type":"revenue"}}
+{"date": "2016-07-01", "revenue":75000, "customers":77}
+{"index":{"_id":"20","_index":"finance","_type":"revenue"}}
+{"date": "2016-08-01", "revenue":132000, "customers":111}
+{"index":{"_id":"21","_index":"finance","_type":"revenue"}}
+{"date": "2016-09-01", "revenue":165000, "customers":121}
+{"index":{"_id":"22","_index":"finance","_type":"revenue"}}
+{"date": "2016-10-01", "revenue":87000, "customers":132}
+{"index":{"_id":"23","_index":"finance","_type":"revenue"}}
+{"date": "2016-11-01", "revenue":143000, "customers":133}
+{"index":{"_id":"24","_index":"finance","_type":"revenue"}}
+{"date": "2016-12-01", "revenue":243000, "customers":99}

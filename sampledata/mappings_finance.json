@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "revenue": {
+      "properties": {
+        "date": {
+          "type":  "date"
+        }
+      }
+    }
+  }
+}

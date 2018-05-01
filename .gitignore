@@ -1,0 +1,5 @@
+target/
+*.pyc
+bootstrap.zip
+__pycache__
+venv/

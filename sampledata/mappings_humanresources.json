@@ -1,0 +1,28 @@
+{"mappings": {
+    "employees": {
+      "properties": {
+        "FirstName": {
+          "type":  "keyword"
+        },
+        "LastName": {
+          "type":  "keyword"
+        },
+        "Designation": {
+          "type":  "keyword"
+        },
+        "Gender": {
+          "type":  "keyword"
+        },
+        "Interests": {
+          "type":  "keyword"
+        },
+        "MaritalStatus": {
+          "type":  "keyword"
+        },
+        "Address": {
+          "type":  "keyword"
+        }
+      }
+    }
+  }
+}

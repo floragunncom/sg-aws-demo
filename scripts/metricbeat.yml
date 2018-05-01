@@ -1,0 +1,18 @@
+output.elasticsearch:
+  username: logstash
+  password: logstash
+  protocol: https
+  hosts: ["RPLC_HOST"]
+  ssl.enabled: true
+  ssl.verification_mode: none
+
+metricbeat.modules:
+- module: system
+  metricsets:
+    - cpu
+    - load
+    - memory
+    - process
+  enabled: true
+  period: 60s
+  processes: ['.*']
