@@ -60,7 +60,7 @@
         }
     },
     "Outputs": {
-        "PublicIP02a8c6454bed4a7e9a0f235b70e198fe": {
+        "PublicIP2a41dc16d9b14e39aa0389f39d7f6fce": {
             "Description": "SG Server",
             "Value": {
                 "Fn::GetAtt": [
@@ -69,7 +69,7 @@
                 ]
             }
         },
-        "PublicIP94f8c5e605144299b934a21ca185c023": {
+        "PublicIP33ba2a6eb9c943ee9c9af321f50e5333": {
             "Description": "SG Server",
             "Value": {
                 "Fn::GetAtt": [
@@ -78,7 +78,7 @@
                 ]
             }
         },
-        "PublicIPbece5b6905eb4572a92adca30f54a4c4": {
+        "PublicIPe0e949d105c04f93a4b3f988085dcc33": {
             "Description": "SG Server",
             "Value": {
                 "Fn::GetAtt": [

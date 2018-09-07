@@ -241,11 +241,11 @@ check_aws() {
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DIST=`grep DISTRIB_ID /etc/*-release | awk -F '=' '{print $2}'`
 
-ES_VERSION=6.2.4
-SG_VERSION=$ES_VERSION-22.1
-SG_KIBANA_VERSION=12
+ES_VERSION=6.4.0
+SG_VERSION=$ES_VERSION-23.0
+SG_KIBANA_VERSION=14
 NETTY_NATIVE_VERSION=2.0.7.Final #static lib from bintray, unset for no openssl
-OPENSSL_VERSION=1.0.2n #static lib from bintray
+OPENSSL_VERSION=1.0.2p #static lib from bintray
 
 
 if ! check_cmd apt-get; then
