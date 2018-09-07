@@ -12,15 +12,15 @@ check_ret() {
 
 do_install() {
 
-  #REGION=$(wget -qO- http://169.254.169.254/latest/meta-data/placement/availability-zone | sed 's/.$//')
-  #export REGION=$(sed -e 's/^"//' -e 's/"$//' <<<"$REGION")
+  REGION=$(wget -qO- http://169.254.169.254/latest/meta-data/placement/availability-zone | sed 's/.$//')
+  export REGION=$(sed -e 's/^"//' -e 's/"$//' <<<"$REGION")
 
   STACKNAME=$(aws ec2 describe-instances --filters "Name=private-ip-address,Values=$(ec2metadata --local-ipv4)" --region $REGION | jq '.Reservations[0].Instances[0].Tags | map(select (.Key == "aws:cloudformation:stack-name" )) ' | jq .[0].Value | tr -d '"')
   export STACKNAME=$(sed -e 's/^"//' -e 's/"$//' <<<"$STACKNAME")
 
   export INSTANCE_ID=$(ec2metadata --instance-id)
 
-  REGION=$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | grep region | awk -F\" '{print $4}')
+  #REGION=$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | grep region | awk -F\" '{print $4}')
 
   export SG_PUBHOST=$(curl -s http://169.254.169.254/latest/meta-data/public-hostname)
   export SG_PRIVHOST=$(curl -s http://169.254.169.254/latest/meta-data/hostname)
@@ -97,13 +97,13 @@ do_install() {
 
   $ES_BIN/elasticsearch-plugin remove discovery-ec2 > /dev/null 2>&1
   $ES_BIN/elasticsearch-plugin remove search-guard-6 > /dev/null 2>&1
-  $ES_BIN/elasticsearch-plugin remove x-pack > /dev/null 2>&1
+  #$ES_BIN/elasticsearch-plugin remove x-pack > /dev/null 2>&1
 
   $ES_BIN/elasticsearch-plugin install -b discovery-ec2 > /dev/null
   check_ret "Installing discovery-ec2 plugin"
 
-  $ES_BIN/elasticsearch-plugin install -b x-pack > /dev/null
-  check_ret "Installing x-pack plugin"
+  #$ES_BIN/elasticsearch-plugin install -b x-pack > /dev/null
+  #check_ret "Installing x-pack plugin"
 
   $ES_BIN/elasticsearch-plugin install -b com.floragunn:search-guard-6:$SG_VERSION > /dev/null
   check_ret "Installing sg 6 plugin"
@@ -257,14 +257,15 @@ apt-get -yqq install unzip awscli docker.io curl git jq ansible apt-transport-ht
 
 
 
-########## start Oracle 8 Java
+########## start OpenJDK 11
 apt-get -y remove openjdk-7-jdk openjdk-7-jre openjdk-7-jre-headless || true
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections > /dev/null 2>&1
-apt-get -yqq install software-properties-common > /dev/null 2>&1
-add-apt-repository -y ppa:webupd8team/java > /dev/null 2>&1
-apt-get -yqq update > /dev/null 2>&1
-apt-get -yqq install oracle-java8-installer oracle-java8-unlimited-jce-policy > /dev/null 2>&1
-########## end Oracle 8 Java
+#echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections > /dev/null 2>&1
+#apt-get -yqq install software-properties-common > /dev/null 2>&1
+#add-apt-repository -y ppa:webupd8team/java > /dev/null 2>&1
+#apt-get -yqq update > /dev/null 2>&1
+apt-get install openjdk-11-jdk
+#apt-get -yqq install oracle-java8-installer oracle-java8-unlimited-jce-policy > /dev/null 2>&1
+########## end OpenJDK 11
 
 
 show_info
