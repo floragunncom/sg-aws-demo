@@ -60,7 +60,7 @@
         }
     },
     "Outputs": {
-        "PublicIP2a41dc16d9b14e39aa0389f39d7f6fce": {
+        "PublicIP5f36103c255b4ff98a7acfe2f4aa5f29": {
             "Description": "SG Server",
             "Value": {
                 "Fn::GetAtt": [
@@ -69,20 +69,20 @@
                 ]
             }
         },
-        "PublicIP33ba2a6eb9c943ee9c9af321f50e5333": {
-            "Description": "SG Server",
-            "Value": {
-                "Fn::GetAtt": [
-                    "sgnode2",
-                    "PublicIp"
-                ]
-            }
-        },
-        "PublicIPe0e949d105c04f93a4b3f988085dcc33": {
+        "PublicIPce6d74b8ed644505864c20da6307c307": {
             "Description": "SG Server",
             "Value": {
                 "Fn::GetAtt": [
                     "sgnode3",
+                    "PublicIp"
+                ]
+            }
+        },
+        "PublicIPfc4042ee41274e0b8f1365f14e37577b": {
+            "Description": "SG Server",
+            "Value": {
+                "Fn::GetAtt": [
+                    "sgnode2",
                     "PublicIp"
                 ]
             }
@@ -422,7 +422,8 @@
                                 "apt-get -yqq install git wget curl > /dev/null 2>&1\n",
                                 "rm -rf /sg-aws-demo\n",
                                 "git clone https://github.com/floragunncom/sg-aws-demo.git\n",
-                                "chmod +x /sg-aws-demo/*.sh\n",
+                                "chmod +x /sg-aws-demo/scripts/*.sh\n",
+                                "cd /sg-aws-demo\n",
                                 "\n",
                                 "until /sg-aws-demo/scripts/install_sg.sh; do\n",
                                 "  echo \"something goes wrong, retrying in 60 seconds...\"\n",
@@ -511,7 +512,8 @@
                                 "apt-get -yqq install git wget curl > /dev/null 2>&1\n",
                                 "rm -rf /sg-aws-demo\n",
                                 "git clone https://github.com/floragunncom/sg-aws-demo.git\n",
-                                "chmod +x /sg-aws-demo/*.sh\n",
+                                "chmod +x /sg-aws-demo/scripts/*.sh\n",
+                                "cd /sg-aws-demo\n",
                                 "\n",
                                 "until /sg-aws-demo/scripts/install_sg.sh; do\n",
                                 "  echo \"something goes wrong, retrying in 60 seconds...\"\n",
@@ -600,7 +602,8 @@
                                 "apt-get -yqq install git wget curl > /dev/null 2>&1\n",
                                 "rm -rf /sg-aws-demo\n",
                                 "git clone https://github.com/floragunncom/sg-aws-demo.git\n",
-                                "chmod +x /sg-aws-demo/*.sh\n",
+                                "chmod +x /sg-aws-demo/scripts/*.sh\n",
+                                "cd /sg-aws-demo\n",
                                 "\n",
                                 "until /sg-aws-demo/scripts/install_sg.sh; do\n",
                                 "  echo \"something goes wrong, retrying in 60 seconds...\"\n",

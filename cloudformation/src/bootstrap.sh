@@ -12,7 +12,8 @@ apt-get -yqq update > /dev/null 2>&1
 apt-get -yqq install git wget curl > /dev/null 2>&1
 rm -rf /sg-aws-demo
 git clone https://github.com/floragunncom/sg-aws-demo.git
-chmod +x /sg-aws-demo/*.sh
+chmod +x /sg-aws-demo/scripts/*.sh
+cd /sg-aws-demo
 
 until /sg-aws-demo/scripts/install_sg.sh; do
   echo "something goes wrong, retrying in 60 seconds..."

@@ -259,12 +259,12 @@ apt-get -yqq install unzip awscli docker.io curl git jq ansible apt-transport-ht
 
 ########## start OpenJDK 11
 apt-get -y remove openjdk-7-jdk openjdk-7-jre openjdk-7-jre-headless || true
-#echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections > /dev/null 2>&1
-#apt-get -yqq install software-properties-common > /dev/null 2>&1
-#add-apt-repository -y ppa:webupd8team/java > /dev/null 2>&1
-#apt-get -yqq update > /dev/null 2>&1
-apt-get install openjdk-11-jdk
-#apt-get -yqq install oracle-java8-installer oracle-java8-unlimited-jce-policy > /dev/null 2>&1
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections > /dev/null 2>&1
+apt-get -yqq install software-properties-common > /dev/null 2>&1
+add-apt-repository -y ppa:webupd8team/java > /dev/null 2>&1
+apt-get -yqq update > /dev/null 2>&1
+#apt-get install openjdk-11-jdk
+apt-get -yqq install oracle-java8-installer oracle-java8-unlimited-jce-policy > /dev/null 2>&1
 ########## end OpenJDK 11
 
 
